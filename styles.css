@@ -6,33 +6,26 @@
 
 body {
     background: hsl(185, 75%, 39%);
-    
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100vh;
 }   
 
 
-/* hr {
-    color:hsl(0, 0%, 59%);
-} */
-
 .container {
     display: flex;
     flex-direction: column;
+    margin:auto;
+    margin-top:150px;
     align-items: center;
-    /* height: 55vh;
-    width: 25vw; */
     height: 450px;
     width: 25%;
-    border: 2px solid green;
-    border-radius: 10px 10px 10px 10px;
-    /* margin: 25vh auto 0; */
+    flex-shrink: 0;
 }
 
 .top {
-    /* border-radius: 10px 10px 0px 0px; */
+    border-radius: 10px 10px 0px 0px;
     height: 35%;
     width: 100%;
     background: url(/images/bg-pattern-card.svg);
@@ -45,28 +38,8 @@ body {
 img {
     margin-top: 25%;
     border-radius: 50%;
-    border :5px solid white;
-    
+    border :5px solid white;  
 }
-
-/* .above-image {
-    display: inline-block;
-    background: url(/images/bg-pattern-card.svg);
-    background-size: cover;
-}
-
-.above-image span {
-    display: block;
-    align-items: center;
-    border: 10px solid white;
-}
-
-.below-image {
-    position: relative;     
-    z-index: -10;
-    display: inline-block;
-    background-color: white;
-} */
 
 
 .profile-photo {
@@ -79,7 +52,7 @@ img {
     height: 65%;
     width: 100%;
     background-color: white;
-    /* border-radius: 0 0 10px 10px; */
+    border-radius: 0 0 10px 10px;
 }
 
 .name {
@@ -128,6 +101,7 @@ img {
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 700;
     font-size: 18px;
+    padding-bottom: 10px;
 }
   
 .flexin-body {
@@ -136,9 +110,4 @@ img {
     font-size: 12px;
     letter-spacing: 1px;
     
-}
-
-@media (max-width: 1080px) {
-    
-
 }
