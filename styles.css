@@ -16,12 +16,13 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin:auto;
     margin-top:150px;
     align-items: center;
     height: 450px;
     width: 25%;
-    flex-shrink: 0;
+    min-width:350px;
 }
 
 .top {
