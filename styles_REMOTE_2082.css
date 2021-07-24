@@ -13,7 +13,7 @@ html{
 }
 
 body {
-    background: hsl(185, 75%, 39%);
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -29,10 +29,8 @@ body {
     align-items: center;
     height: 450px;
     width: 25%;
-    min-width:350px;   /*to stop flexbox from shrinking*/
+    min-width:350px;
 }
-
-
 
 .top {
     border-radius: 10px 10px 0px 0px;
@@ -121,4 +119,3 @@ img {
     letter-spacing: 1px;
     
 }
-
