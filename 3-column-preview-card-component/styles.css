@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    line-height: 2;
+}
+
+h1 {
+    color:hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    padding: 30px 0;
+}
+
+section {
+    background-color:hsl(0, 0%, 95%);
+}
+
+.container {
+    margin: 10% 16.7% 10% 16.7%;
+    display: flex;
+    justify-content:center;
+}
+
+
+.col-sedan {
+    border-radius: 10px 0 0 10px;
+    background-color:hsl(31, 77%, 52%);
+    height: auto;
+    width: 33.33%;
+}
+
+.col-suv {
+    background-color:hsl(184, 100%, 22%);
+    height: auto;
+    width: 33.33%;
+}
+
+.col-luxury {
+    border-radius: 0 10px 10px 0;
+    background-color:hsl(179, 100%, 13%);
+    height: auto;
+    width: 33.33%;
+}
+
+.attribution {
+    color: white;
+    background-color:black;
+}
+
+.btn {
+    bottom: 30px;
+    display:block;
+    padding:10px 20px;
+    border-radius: 40px;
+    margin-top: 90px;
+    position: relative;
+}
+
+
+.para {
+    height: 100px;
+    width: auto;
+}
+.btn:hover {
+    background: rgb(197, 196, 196);
+	transition: all 0.4s ease 0s;
+}
+
+
+/* improvements needed in btn  */
+.btn-sedan {
+    color:hsl(31, 77%, 52%);
+}
+.btn-suv {
+
+    color:hsl(184, 100%, 22%);
+}
+.btn-luxury {
+    color:hsl(179, 100%, 13%);
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        display:block;
+        
+    }
+    
+    .col-sedan {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .col-luxury {
+        border-radius: 0 0 10px 10px;
+        
+    }
+    
+    
+}
