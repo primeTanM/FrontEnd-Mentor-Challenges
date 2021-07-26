@@ -7,8 +7,10 @@ body {
     margin: 0;
 }
 
+/* top section */
+
 .top {
-    background-image: url("https://raw.githubusercontent.com/supertrupert/SunnySideAgency/main/images/desktop/image-header.jpg");
+    background-image: url("./images/desktop/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -31,7 +33,7 @@ header {
 
 .navbar a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /*to remove underline*/
     margin-left: 3rem;
 }
 
@@ -70,18 +72,189 @@ header .hamburger-button {
     margin: 170px;
 }
 
+/* grid section */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-text {
+    height: 650px;
+    width:100%;
+    padding: 9rem;
+}
+
+.grid-text h2 {
+    font-family: "Fraunces", serif;
+    font-size: 3rem;
+}
+
+.grid-text p {
+    font-family: "Barlow",sans-serif;
+    color: hsl(210, 4%, 67%);
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.grid-text a {
+    display: block;
+    font-family: "Fraunces", serif;
+    text-decoration: solid underline hsl(51, 97%, 65%) 6px;
+    margin-top: 3rem;
+    color: black;
+}
+
+.grid-box-2 {
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-size: cover;
+}
+
+.grid-box-3 {
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-size: cover;
+}
+
+.grid-text-img {
+    height: 650px;
+    width:100%;
+    padding: 27rem 12rem 2rem 12rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.grid-text-img h2 {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+}
+
+.grid-text-img p {
+    font-family: "Barlow",sans-serif;
+}
 
 
+.grid-box-5 {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    color: hsl(167, 40%, 24%);
+}
 
 
+.grid-box-6 {
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-size: cover;
+    color: hsl(198, 62%, 26%);
+}
+
+.grid-testimonials {
+    grid-column: span 2;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 8rem;
+}
+
+.grid-testimonials-heading {
+    grid-column: span 3;
+    text-align: center;
+    font-family: "Fraunces", serif;
+    letter-spacing: 0.35em;
+    color: hsl(210, 4%, 67%);
+    height: 0rem;
+}
+
+.testimonial-box {
+    min-height: 10rem;
+    width: 100%;
+    text-align: center;
+    padding: 3rem;
+    color: hsl(213, 9%, 39%);
+    font-family: "Barlow",sans-serif;
+    line-height: 1.75;
+
+}
+
+.testimonial-box img {
+    border-radius: 50%;
+    width: 20%;
+    
+}
+
+.testimonial-name {
+    margin-top: 6rem;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    color: black;
+}
+
+.testimonial-resignation{
+    color: hsl(210, 4%, 67%);
+    font-size: 0.75em;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 500px;
+    width: 100%;
+}
+
+.image-milkbottles {
+    background-image: url("./images/desktop/image-gallery-milkbottles.jpg");
+    background-size: cover;
+}
+
+.image-orange {
+    background-image: url("./images/desktop/image-gallery-orange.jpg");
+    background-size: cover;
+}
+
+.image-cone {
+    background-image: url("./images/desktop/image-gallery-cone.jpg");
+    background-size: cover;
+}
+
+.image-sugarcubes {
+    background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
+    background-size: cover;
+}
+
+.socials {
+    display: grid;
+    min-height: 250px;
+    background-color: #90D4C5;
+    padding: 2rem;
+}
+
+.footer-logo, .socials-menu {
+    text-align: center;
+}
+
+.footer-logo {
+    padding: 20px;
+}
 
 
+.socials-menu a {
+    text-decoration: none;
+    color:hsl(168, 34%, 41%);
+    font-family: "Barlow",sans-serif;
+    padding: 3rem 1rem;
+}
 
+.socials-icons {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
 
+.socials-icons p {
+    text-align: center;
 
-
-
-
+}
 
 /* 
 .grid-container {
