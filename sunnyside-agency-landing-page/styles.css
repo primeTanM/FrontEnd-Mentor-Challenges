@@ -7,13 +7,91 @@ body {
     margin: 0;
 }
 
+.top {
+    background-image: url("https://raw.githubusercontent.com/supertrupert/SunnySideAgency/main/images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.navbar {
+    font-family: "Barlow",sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;   /*to remove bullets*/
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 3rem;
+}
+
+.navbar a li {
+    opacity: 0.8;
+}
+
+.navbar a button {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+header .hamburger-button {
+    all: inherit;
+    padding: 0;
+    display: none;
+}
+
+.top h1 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: white;
+    letter-spacing: 0.5rem;
+    margin-top: 3rem;
+}
+
+.top .arrow-down {
+    text-align: center;
+    margin: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .header {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     background-image: url(./images/desktop/image-header.jpg);
     background-size: cover;
     grid-column: span 2;
@@ -23,18 +101,20 @@ body {
 }
 
 .header-title {
-    
-    margin: 500px 450px;
     font-family: 'Fraunces', sans-serif;
     font-weight: 900;
     color: white;
-    font-size: 3.5rem;
+    font-size: 3.5rem;      
     
 }
 
+.header-logo{
 
-.arrow-down{
+}
+
+
+.header-arrow-down{
     display: block;
     margin: auto;
     margin-top:340px;
-}
+} */
