@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+  background-color: hsl(233, 47%, 7%);
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-weight: 700; 
+  margin: 42px 30px 22px 30px;
+  text-align: center;
+}
+
+h1 a {
+  color: hsl(277, 64%, 61%);
+}
+
+.container {
+  /* margin-bottom: 200px; */
+  background: hsl(244, 38%, 16%);
+  border-radius: 12px;
+  margin: 40px 20px;
+  /* max-width: 1440px; */
+}
+
+.img-container {
+  border-radius: 10px 10px 0px 0px;
+  min-height: 250px;
+  width: 100%;
+  background: url(./images/image-header-mobile.jpg), hsl(277, 64%, 61%);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.text {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 30px;
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 22px;
+  padding: 30px 0;
+  color: hsl(0, 0%, 100%);
+}
+
+.stats-text {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.stats-data {
+  margin: 12px 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.stats-body {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.attribution {
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(277, 64%, 61%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  .img-container {
+    min-height: 100%;
+    order: 2;
+    /* background-size: cover; */
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  h1 {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    text-align: left;
+    margin: 0;
+  }
+
+  .stats {
+    flex-direction: row;
+    align-self: flex-end;
+    gap: 60px;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .stats-text {
+    align-items: flex-start;
+  }
+
+  .content-container {
+    padding: 70px;
+  }
+}
