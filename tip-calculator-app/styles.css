@@ -38,6 +38,7 @@ body {
     height: 450px;
     background-size: 100%;
     border-radius: 20px;
+    
     /* padding: 30px; */
 }
 
@@ -121,8 +122,9 @@ p {
     background-color: var(--Darker-grayish-cyan);
 }
 
-.tip-btn:focus{
+.btn-active{
     background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
 }
 
 .custom-tip {
@@ -214,6 +216,7 @@ p {
         height: auto;
         width: 375px;
         padding: 10px 0px;
+        text-align: center;
     }
 
     .calc {
