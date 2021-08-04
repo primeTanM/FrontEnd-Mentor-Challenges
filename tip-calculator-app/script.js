@@ -7,6 +7,7 @@ var numberOfPeople;
 //getting the value of bill
 document.getElementById("bill-id").addEventListener('input', function(){
     billAmount = parseFloat(this.value, 10);
+    console.log(billAmount);
     calculateResult();
 })
 

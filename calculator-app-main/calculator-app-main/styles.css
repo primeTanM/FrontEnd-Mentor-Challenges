@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    
+    /* background */
+    --Very-dark-desaturated-blue1 : hsl(222, 26%, 31%); /* (main background) */
+    --Very-dark-desaturated-blue2 : hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+    --Very-dark-desaturated-blue3 : hsl(224, 36%, 15%); /* (screen background) */
+
+    /* keys */
+    --Desaturated-dark-blue1 : hsl(225, 21%, 49%); /* (key background) */
+    --Desaturated-dark-blue2 : hsl(224, 28%, 35%); /* (key shadow) */
+    --Red : hsl(6, 63%, 50%); /* (key background, toggle) */
+    --Dark-red : hsl(6, 70%, 34%); /* (key shadow) */
+    --Light-grayish-orange : hsl(30, 25%, 89%); /* (key background) */
+    --Grayish-orange : hsl(28, 16%, 65%); /* (key shadow) */
+
+    /* text */
+    --Ver-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-dark-desaturated-blue1);
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 480px;
+    text-align: center;
+}
+
+.calc {
+    margin: 10px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10%;
+    color: white;  
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+
+.display {
+    height: 20%;
+    background-color: var(--Very-dark-desaturated-blue3);
+    border-radius: 10px;
+    font-size: 50px;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 10px;
+    color: white;
+}
+
+.keypad {
+    height: 70%;
+    background-color: var(--Very-dark-desaturated-blue2);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.keypad button {
+    border-radius: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--Light-grayish-orange);
+    
+}
+
+#equals-btn {
+    grid-column: span 2;
+    background-color: red;
+    
+}
+
+#reset-btn{
+    grid-column: span 2;
+    background-color: var(--Desaturated-dark-blue1);
+}
+
+#delete-btn {
+    background-color: var(--Desaturated-dark-blue1);
+}
