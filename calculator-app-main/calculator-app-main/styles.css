@@ -50,6 +50,7 @@ button {
     height: 600px;
     width: 480px;
     text-align: center;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
 }
 
 .calc {
@@ -70,11 +71,25 @@ button {
     height: 20%;
     background-color: var(--Very-dark-desaturated-blue3);
     border-radius: 10px;
-    font-size: 50px;
+    
     text-align: right;
-    padding-top: 30px;
+    padding-top: 10px;
     padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculation {
+    font-size: 15px;
+    height: 30%;
+    color: rgb(154, 182, 182);
+}
+
+.output {
+    font-size: 50px;
+    height: 70%;
     color: white;
+    overflow: hidden;
 }
 
 .keypad {
@@ -114,3 +129,4 @@ button {
 #delete-btn {
     background-color: var(--Desaturated-dark-blue1);
 }
+

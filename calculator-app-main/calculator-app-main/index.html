@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <!-- <script src="main.js" defer></script> -->
   
   <title>Frontend Mentor | Calculator app</title>
 </head>
@@ -16,25 +17,31 @@
       <p class="heading">calc</p>
     </div>
     <div class="calc display">
-      
+      <div class="calculation">
+        <p class="calculation-value"></p>
+      </div>
+
+      <div class="output">
+        <p class="output-value">0</p>
+      </div>
     </div>
     <div class="calc keypad">
-      <button class="typable number-btn">7</button>
-      <button class="typable number-btn">8</button>
-      <button class="typable number-btn">9</button>
+      <button class="number-btn">7</button>
+      <button class="number-btn">8</button>
+      <button class="number-btn">9</button>
       <button id="delete-btn">DEL</button>
-      <button class="typable number-btn">4</button>
-      <button class="typable number-btn">5</button>
-      <button class="typable number-btn">6</button>
-      <button class="typable operator-btn">+</button>
-      <button class="typable number-btn">1</button>
-      <button class="typable number-btn">2</button>
-      <button class="typable number-btn">3</button>
-      <button class="typable operator-btn">-</button>
-      <button>.</button>
-      <button class="typable number-btn">0</button>
-      <button class="typable operator-btn">/</button>
-      <button class="typable operator-btn">*</button>
+      <button class="number-btn">4</button>
+      <button class="number-btn">5</button>
+      <button class="number-btn">6</button>
+      <button class="operator-btn">+</button>
+      <button class="number-btn">1</button>
+      <button class="number-btn">2</button>
+      <button class="number-btn">3</button>
+      <button class="operator-btn">-</button>
+      <button class="decimal-btn">.</button>
+      <button class="number-btn">0</button>
+      <button class="operator-btn">/</button>
+      <button class="operator-btn">*</button>
 
       <button id="reset-btn">RESET</button>
       <button id="equals-btn">=</button>
