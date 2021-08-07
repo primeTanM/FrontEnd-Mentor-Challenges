@@ -39,9 +39,58 @@ body {
 
 button {
     border: none;
+    /* border: var(--Grayish-orange); */
+    box-shadow: 0 6px 2px -2px var(--Grayish-orange);
     cursor: pointer;
+    top: 0;
 }
 
+button:active{
+    /* margin-top: 2px; */
+    /* height: 10px */
+    box-shadow: none;
+}
+
+.number-btn:hover , .operator-btn:hover {
+    background-color: #B6B1AC;
+}
+
+#equals-btn {
+    grid-column: span 2;
+    background-color: red;
+    box-shadow: 0 6px 2px -2px var(--Dark-red);
+    color: white;
+}
+
+#equals-btn:active, #reset-btn:active, #delete-btn:active{
+    box-shadow: none;
+}
+
+
+
+#reset-btn:hover, #delete-btn:hover{
+    background-color: #414A64;
+    color:rgb(193, 185, 185);
+}
+
+#equals-btn:hover {
+    background-color: var(--Dark-red);
+    color:rgb(193, 185, 185);
+}
+
+#reset-btn{
+    grid-column: span 2;
+    background-color: var(--Desaturated-dark-blue1);
+    box-shadow: 0 6px 2px -2px var(--Desaturated-dark-blue2);
+    color: white;
+    
+}
+
+#delete-btn {
+    background-color: var(--Desaturated-dark-blue1);
+    box-shadow: 0 6px 2px -2px var(--Desaturated-dark-blue2);
+    color: white;
+}
 
 
 .calculator {
@@ -60,12 +109,16 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     height: 10%;
     color: white;  
     font-size: 32px;
     margin-bottom: 0;
 }
 
+.theme {
+    font-size: 15px;
+}
 
 .display {
     height: 20%;
@@ -77,6 +130,8 @@ button {
     padding-right: 10px;
     display: flex;
     flex-direction: column;
+    /* word-wrap: break-word;
+    word-break: break-all; */
 }
 
 .calculation {
@@ -89,8 +144,11 @@ button {
     font-size: 50px;
     height: 70%;
     color: white;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
+
+
 
 .keypad {
     height: 70%;
@@ -112,21 +170,8 @@ button {
     font-size: 20px;
     text-align: center;
     background-color: var(--Light-grayish-orange);
+
     
 }
 
-#equals-btn {
-    grid-column: span 2;
-    background-color: red;
-    
-}
-
-#reset-btn{
-    grid-column: span 2;
-    background-color: var(--Desaturated-dark-blue1);
-}
-
-#delete-btn {
-    background-color: var(--Desaturated-dark-blue1);
-}
 

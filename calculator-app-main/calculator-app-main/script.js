@@ -1,28 +1,31 @@
 var keypadNumbers = document.querySelectorAll('.number-btn');
 var displayNumbers = document.querySelector('.output-value');
+var previewNumbers = document.querySelector('.calculation-value');
 var operator = document.querySelectorAll('.operator-btn');
 var numberButtons = document.querySelectorAll('.number-btn');
 var equalButton = document.getElementById('equals-btn');
+var deleteButton = document.getElementById('delete-btn');
+var previewArr = [];
 
-function calculator(){
+function calculator(first, second, op){
     var result;
-    if (currentOperator === "+"){
-        result = parseFloat(firstNumber) + parseFloat(secondNumber);
+    if (op === "+"){
+        result = parseFloat(first) + parseFloat(second);
     }
 
-    if (currentOperator === "-"){
-        result = parseFloat(firstNumber) - parseFloat(secondNumber);
+    if (op === "-"){
+        result = parseFloat(first) - parseFloat(second);
     }
 
-    if (currentOperator === "*"){
-        result = parseFloat(firstNumber) * parseFloat(secondNumber);
+    if (op === "*"){
+        result = parseFloat(first) * parseFloat(second);
     }
 
-    if (currentOperator === "/"){
-        result = parseFloat(firstNumber) / parseFloat(secondNumber);
+    if (op === "/"){
+        result = parseFloat(first) / parseFloat(second);
     }
 
-    return result.toFixed(2);
+    return result;
 }
 
 
@@ -38,6 +41,10 @@ numberButtons.forEach(btn => {
             displayNumbers.innerText = displayNumbers.innerText + btn.innerText;
         }
 
+        previewArr.push(btn.innerText);
+
+        previewNumbers.innerText = previewArr.join('');
+        console.log(previewArr);
         
     })
 })
@@ -51,17 +58,24 @@ document.querySelector('.decimal-btn').addEventListener("click", function(){
     else {
         displayNumbers.innerText = displayNumbers.innerText + this.innerText;
     }
+    previewArr.push('.');
+
+    previewNumbers.innerText = previewArr.join('');
 
     
 })
 
-document.getElementById('reset-btn').addEventListener("click", function(){
-    displayNumbers.innerText = '0';
-    firstNumber = 0;
-    secondNumber = 0;
-    currentOperator = '';
-    count = 0;
 
+deleteButton.addEventListener("click", function(){
+    if (delCount >= 1){
+        displayNumbers.innerText = 0;
+    }
+    else{
+        displayNumbers.innerText = (displayNumbers.innerText).slice(0,-1);
+
+    }
+    console.log(delCount);
+    previewArr = [];
 })
 
 // var firstNumber = 0;
@@ -80,21 +94,57 @@ operator.forEach(btn => {
         } 
         
         count = count + 1;
+        delCount = 0;
+
+        previewArr.push(btn.innerText);
+
+        previewNumbers.innerText = previewArr.join('');
     })
 })
 
-
+var delCount = 0;
+var equalCount = 0;
 equalButton.addEventListener("click", function(){
-    secondNumber = displayNumbers.innerText;
-    console.log(secondNumber);
-    console.log(currentOperator);
-    displayNumbers.innerText = calculator();
-    count = 0;
+    
+    if (equalCount === 0) {
+        secondNumberForMultipleEqual = displayNumbers.innerText;
+        secondNumber = displayNumbers.innerText;
+        console.log(firstNumber);
+        console.log(secondNumber);
+        console.log(currentOperator);
+        displayNumbers.innerText = calculator(firstNumber, secondNumber, currentOperator);
+        count = 0;
+        
+    }
+    else {
+        firstNumberForMultipleEqual = displayNumbers.innerText;
+        displayNumbers.innerText = calculator(firstNumberForMultipleEqual, secondNumberForMultipleEqual, currentOperator);
+        console.log(previewArr);
+    }
+    
+    previewArr = [];
+    previewArr.push(displayNumbers.innerText);
+    previewNumbers.innerText = previewArr.join('');
+    console.log(previewArr);
+    
+    delCount += 1;
+    equalCount += 1;
     
 })
 
 
+document.getElementById('reset-btn').addEventListener("click", function(){
+    displayNumbers.innerText = '0';
+    firstNumber = 0;
+    secondNumber = 0;
+    currentOperator = '';
+    count = 0;
+    delCount = 0;
+    equalCount = 0; 
+    previewArr = [];
+    previewNumbers.innerText = '';
 
+})
 
 
 
