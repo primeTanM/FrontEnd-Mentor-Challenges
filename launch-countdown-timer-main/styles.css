@@ -69,9 +69,9 @@ body {
 
 .timer-box span{
     background: -webkit-linear-gradient(#D64F70 50%, #FF5E88 50%);
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
 }
 
 
@@ -98,10 +98,21 @@ a:hover svg > path{
 }
 
 @media only screen and (max-width: 640px) {
-
     .timer-box {
         height: 100px;
         width: 100px;
         font-size: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .timer-box {
+        height: 80px;
+        width: 80;
+        font-size: 2.5em;
+    }
+
+    body {
+        background-size: contain;
     }
 }
