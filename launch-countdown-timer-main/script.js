@@ -1,5 +1,7 @@
 const timer = () => {
-    const countDate = new Date("January 1, 2022 00:00:00").getTime();
+    const countDate = new Date("January 1, 2023 00:00:00").getTime();
+    // const countDate = new Date("December 31, 2022 23:51:00").getTime();
+
     const now = new Date().getTime();
 
     const difference = countDate - now;
@@ -14,7 +16,19 @@ const timer = () => {
     const displayMinutes = Math.floor((difference % hours) / minutes);
     const displaySeconds = Math.floor((difference % minutes) / seconds);
 
+    var firework = document.querySelector(".party");
+    var arrived = document.querySelector(".arrived");
+    var arriving = document.querySelector(".arriving");
+    var hny = document.querySelector(".hny");
+    var timer = document.querySelector(".timer");
 
+    if(difference <= 0){
+        firework.style.visibility = 'visible';
+        arrived.style.visibility = 'visible';
+        hny.style.visibility = 'visible';
+        arriving.remove();
+        timer.remove();
+    }
     
     if (displayDays < 10) {
         document.getElementById('days').innerText = '0' + displayDays;
